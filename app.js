@@ -30,7 +30,7 @@ const item2 = new Item({
 });
 
 const item3 = new Item({
-  name: "<-- Hit this to delete an item."
+  name: "Hit this to delete an item."
 });
 
 const defaultItems = [item1, item2, item3];
@@ -131,8 +131,10 @@ app.post("/delete", function(req, res){
 
 });
 
+
+
 app.get("/about", function(req, res){
-  res.render("about");
+  res.sendFile("about");
 });
 
 app.listen(3000, function() {
